@@ -10,7 +10,18 @@
   </head>
 
   <body>
+<p>hello</p>
+   
+  <main class='<%= controller.controller_name %>'>
+  <% if current_user %>
+    <%= link_to "Logout", destroy_user_session_path, :method => :delete, :data => { :no_turbolink => true } %>
+  <% else %>
+    <%= link_to "Login", new_user_session_path %>  </a>
+  <% end %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <%= yield %>
 
-    <%= yield %>
+</main>
   </body>
 </html>
