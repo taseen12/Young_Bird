@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Place name:</strong>
+  <%= @place.place_name %>
+</p>
+
+<p>
+  <strong>Img url:</strong>
+  <%= @place.img_url %>
+</p>
+
+<%= link_to 'Edit', edit_place_path(@place) %> |
+<%= link_to 'Back', places_path %>

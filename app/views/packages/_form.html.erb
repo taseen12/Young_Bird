@@ -1,0 +1,62 @@
+<%= form_with(model: package, local: true) do |form| %>
+  <% if package.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(package.errors.count, "error") %> prohibited this package from being saved:</h2>
+
+      <ul>
+        <% package.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :package_no %>
+    <%= form.number_field :package_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :package_name %>
+    <%= form.text_field :package_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pack_description %>
+    <%= form.text_field :pack_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :facilities %>
+    <%= form.text_field :facilities %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :img_url %>
+    <%= form.text_field :img_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :place_id %>
+    <%= form.text_field :place_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hotel_id %>
+    <%= form.text_field :hotel_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :room_id %>
+    <%= form.text_field :room_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

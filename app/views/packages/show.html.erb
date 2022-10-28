@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Package no:</strong>
+  <%= @package.package_no %>
+</p>
+
+<p>
+  <strong>Package name:</strong>
+  <%= @package.package_name %>
+</p>
+
+<p>
+  <strong>Pack description:</strong>
+  <%= @package.pack_description %>
+</p>
+
+<p>
+  <strong>Facilities:</strong>
+  <%= @package.facilities %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @package.price %>
+</p>
+
+<p>
+  <strong>Img url:</strong>
+  <%= @package.img_url %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @package.place_id %>
+</p>
+
+<p>
+  <strong>Hotel:</strong>
+  <%= @package.hotel_id %>
+</p>
+
+<p>
+  <strong>Room:</strong>
+  <%= @package.room_id %>
+</p>
+
+<%= link_to 'Edit', edit_package_path(@package) %> |
+<%= link_to 'Back', packages_path %>
