@@ -1,0 +1,31 @@
+<%= form.label :check_in_date %>
+<%= form.date_field :check_in_date %>
+</div>
+<div class="field">
+  <%= form.label :check_out_date %>
+  <%= form.date_field :check_out_date %>
+</div>
+
+<% if notice %>
+  <aside id="notice"><%= notice %></aside>
+<% end %>
+
+
+<div class="container">
+
+  <div class="row">
+    <% @hotels.each do |hotel| %>
+
+
+      <div class="col-md-4 border d-flex flex-column  align-items-center">
+        <div class="hotel_image"> <%= image_tag(hotel.img_url) %></div>
+        <h2><%= hotel.hotel_name %></h2>
+        <%= link_to 'Check Package',user_rooms_index_path(hotel_id: hotel) %>
+      </div>
+
+
+
+
+    <% end %>
+  </div>
+</div>

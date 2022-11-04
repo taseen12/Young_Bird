@@ -1,9 +1,11 @@
 class RoomsController < ApplicationController
+  before_action :check_access
   before_action :set_room, only: %i[ show edit update destroy ]
 
   # GET /rooms or /rooms.json
   def index
-    @rooms = Room.all
+
+    @room.available_rooms
   end
 
   # GET /rooms/1 or /rooms/1.json
@@ -67,4 +69,11 @@ class RoomsController < ApplicationController
     def room_params
       params.require(:room).permit(:room_no, :no_of_bed, :room_type, :room_description, :facilities, :price, :img_url, :place_id, :hotel_id)
     end
+  def check_access
+    #unless current_user.admin?
+    unless user_signed_in? && current_user.admin?
+      #unless @User.admin.find_by(id: session[:user_id])
+      redirect_to new_user_session_path, alert: "You are not authorized to view this page"
+    end
+  end
 end

@@ -1,8 +1,9 @@
+
 <p id="notice"><%= notice %></p>
 
 <h1>Places</h1>
 
-<table>
+<table class="table table-dark table-striped">
   <thead>
     <tr>
       <th>Place name</th>
@@ -27,3 +28,36 @@
 <br>
 
 <%= link_to 'New Place', new_place_path %>
+<% if notice %>
+  <aside id="notice"><%= notice %></aside>
+<% end %>
+
+
+<!--<div class="container">-->
+
+<!--  <div class="row">-->
+    <%# @places.each do |place| %>
+
+
+
+<!--        <div class="place_image"> <%#= image_tag(place.img_url) %></div>-->
+<!--        <h2><%#= place.place_name %></h2>-->
+
+<!--        <%#= link_to 'Show', place %></td>-->
+<!--        <%#= link_to 'Edit', edit_place_path(place) %></td>-->
+<!--        <%#= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+
+<!--      </div>-->
+<!--      <tr>-->
+<!--                <td><%#= place.place_name %></td>-->
+<!--                <td><%#= place.img_url %></td>-->
+<!--                <td><%#= link_to 'Show', place %></td>-->
+<!--                <td><%#= link_to 'Edit', edit_place_path(place) %></td>-->
+<!--                <td><%#= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+<!--              </tr>-->
+
+
+
+    <%# end %>
+<!--  </div>-->
+<!--</div>-->

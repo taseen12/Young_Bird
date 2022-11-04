@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
-  get 'user_hotel/index'
-  get 'user_place/index'
-  get 'user_package/index'
+  get 'my_bookings/index'
+  get 'user_rooms/index'
+  get 'package_details/index'
+  get 'user_hotels/index'
+  get 'user_places/index'
+  get 'user_packages/index'
+  get 'search', to: "user_place#search"
+  get 'bookings/done'
   resources :packages
+  resources :bookings
   resources :rooms
   resources :hotels
   resources :places

@@ -1,4 +1,5 @@
 class HotelsController < ApplicationController
+  before_action :check_access
   before_action :set_hotel, only: %i[ show edit update destroy ]
 
   # GET /hotels or /hotels.json
@@ -67,4 +68,11 @@ class HotelsController < ApplicationController
     def hotel_params
       params.require(:hotel).permit(:hotel_name, :hotel_type, :location, :img_url, :place_id)
     end
+  def check_access
+    #unless current_user.admin?
+    unless user_signed_in? && current_user.admin?
+      #unless @User.admin.find_by(id: session[:user_id])
+      redirect_to new_user_session_path, alert: "You are not authorized to view this page"
+    end
+  end
 end

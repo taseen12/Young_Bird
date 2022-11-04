@@ -1,9 +1,11 @@
 class PackagesController < ApplicationController
+  before_action :check_access
   before_action :set_package, only: %i[ show edit update destroy ]
 
   # GET /packages or /packages.json
   def index
-    @packages = Package.all
+
+    @packages = Package.where(["package_name Like ?","%#{params[:search]}%"])
   end
 
   # GET /packages/1 or /packages/1.json
@@ -67,4 +69,12 @@ class PackagesController < ApplicationController
     def package_params
       params.require(:package).permit(:package_no, :package_name, :pack_description, :facilities, :price, :img_url, :place_id, :hotel_id, :room_id)
     end
+
+def check_access
+  #unless current_user.admin?
+  unless user_signed_in? && current_user.admin?
+    #unless @User.admin.find_by(id: session[:user_id])
+    redirect_to new_user_session_path, alert: "You are not authorized to view this page"
+  end
+end
 end

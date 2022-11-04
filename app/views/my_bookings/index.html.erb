@@ -1,0 +1,31 @@
+<% if notice %>
+  <aside id="notice"><%#= notice %></aside>
+<% end %>
+<table class="table table-dark table-striped">
+  <thead>
+  <tr>
+    <th>user ID</th>\
+    <th>Order ID</th>
+    <th>user name</th>
+    <th>Car Name</th>
+    <th>Price</th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <%#= @user.orders%>
+
+  <% @user.bookings.each do |booking| %>
+    <tr>
+      <td><%= @user.id%></td>
+      <td> <%= booking.id %></td>
+      <td> <%= booking.name %></td>
+
+      <td><%= booking.room.room_no%></td>
+      <td><%= booking.room.price%></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+

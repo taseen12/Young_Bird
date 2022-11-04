@@ -1,10 +1,30 @@
 class PlacesController < ApplicationController
+  before_action :check_access
   before_action :set_place, only: %i[ show edit update destroy ]
 
   # GET /places or /places.json
+
   def index
-    @places = Place.all
+  #  if session[:q]
+  #    @places = Place.where(["place_name Like ?","%"+session[:q]+"%"])
+  # else
+   @places = Place.all
   end
+  #  end
+  # def search
+  #
+  #  session[:q] = params[:q]
+  # redirect_to places_path
+  # end
+  # # def index
+  #
+  #     @place = Place.all
+  #
+  # end
+  # def search
+  #   #@places = Place.where("place_name LIKE ?","%"+params[:q]+"%")
+  #   @places = Place.where(["place_name Like ?","%#{params[:q]}%"])
+  # end
 
   # GET /places/1 or /places/1.json
   def show
@@ -67,4 +87,11 @@ class PlacesController < ApplicationController
     def place_params
       params.require(:place).permit(:place_name, :img_url)
     end
+  def check_access
+    #unless current_user.admin?
+    unless user_signed_in? && current_user.admin?
+      #unless @User.admin.find_by(id: session[:user_id])
+      redirect_to new_user_session_path, alert: "You are not authorized to view this page"
+    end
+  end
 end

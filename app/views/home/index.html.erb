@@ -1,2 +1,51 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="field">
+<%= form.label :check_in_date %>
+<%= form.date_field :check_in_date %>
+</div>
+<div class="field">
+  <%= form.label :check_out_date %>
+  <%= form.date_field :check_out_date %>
+</div>
+<%#= search_form_for @search, url:search_hotels_path, %>
+    <h1>Star rating </h1>
+
+<div class="rating">
+
+  <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
+  <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
+  <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
+  <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
+  <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+</div>
+
+
+
+
+<div class="d-flex flex-row bd-highlight mb-3">
+<div class="d-flex justify-content-start">...</div>
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">  5000 + </p>
+    <p class="text">Happy CUstomer </p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>
