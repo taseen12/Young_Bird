@@ -46,15 +46,17 @@
     <%= form.text_field :img_url %>
   </div>
 
-  <div class="field">
-    <%= form.label :place_id %>
-    <%= form.text_field :place_id %>
-  </div>
+  <div class=" control-group">
+    <%= form.label :place, class: 'control-group' %>
+    <div class=" control-group">
+      <%= collection_select(:room, :place_id, Place.all, :id, :place_name, :prompt => true)%>
+    </div></div>
 
-  <div class="field">
-    <%= form.label :hotel_id %>
-    <%= form.text_field :hotel_id %>
-  </div>
+  <div class=" control-group">
+    <%= form.label :hotel, class: 'control-group' %>
+    <div class=" control-group">
+      <%= collection_select(:room, :hotel_id, Hotel.all, :id, :hotel_name, :prompt => true)%>
+    </div></div>
 
   <div class="actions">
     <%= form.submit %>

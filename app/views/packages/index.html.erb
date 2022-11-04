@@ -1,10 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Packages</h1>
+<%= form_tag packages_path, :method => 'get' do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search" %>
+<% end %>
 
-<table>
+<table class="table table-dark table-striped">
   <thead>
-    <tr>
+  <tr>
       <th>Package no</th>
       <th>Package name</th>
       <th>Pack description</th>

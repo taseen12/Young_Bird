@@ -10,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_28_090648) do
+ActiveRecord::Schema.define(version: 2022_11_03_101000) do
+
+  create_table "bookings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "contact_no"
+    t.string "email"
+    t.date "check_in_date"
+    t.date "check_out_date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "hotel_id"
+    t.bigint "room_id"
+    t.bigint "user_id"
+    t.index ["hotel_id"], name: "index_bookings_on_hotel_id"
+    t.index ["room_id"], name: "index_bookings_on_room_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
 
   create_table "hotels", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "hotel_name"
@@ -35,6 +52,7 @@ ActiveRecord::Schema.define(version: 2022_10_28_090648) do
     t.bigint "room_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "code"
     t.index ["hotel_id"], name: "index_packages_on_hotel_id"
     t.index ["place_id"], name: "index_packages_on_place_id"
     t.index ["room_id"], name: "index_packages_on_room_id"
@@ -76,6 +94,9 @@ ActiveRecord::Schema.define(version: 2022_10_28_090648) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "hotels"
+  add_foreign_key "bookings", "rooms"
+  add_foreign_key "bookings", "users"
   add_foreign_key "hotels", "places"
   add_foreign_key "packages", "hotels"
   add_foreign_key "packages", "places"

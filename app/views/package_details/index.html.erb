@@ -1,0 +1,50 @@
+<% if notice %>
+  <aside id="notice"><%= notice %></aside>
+<% end %>
+
+<div class="container mt-3">
+
+<div class =" imagee">
+
+    <div class="col-md-4  d-flex flex-row  bd-higlight mb-3 ">
+      <div class="pl_image  ">
+        <div class="p-2 bd-highlight"> <h3>Place </h3>
+          <img class=" img-resposive img-resize ">
+          <%= image_tag(@package.place.img_url) %>
+        <%#= image_tag(@package.place.image_url) %>
+        <h2><%= @package.place.place_name %></h2>
+      </div>
+    </div>
+      <div class="ht_image ">
+        <div class="p-2 bd-highlight"> <h3>Place </h3>
+
+        <%= image_tag(@package.hotel.img_url) %>
+        <%#= image_tag(@package.place.image_url) %>
+        <h2><%= @package.hotel.hotel_name %></h2>
+        </div>
+      </div>
+      <div class="rm_image img-fluid ">
+        <div class="p-2 bd-highlight"> <h3>Place </h3>
+
+
+        <%= image_tag(@package.room.img_url) %>
+        <%#= image_tag(@package.place.image_url) %>
+
+        <h2><%= @package.room.room_no %></h2>
+        </div></div>
+
+      </div>
+    </div>
+
+</div>
+
+
+
+
+  <%#= link_to 'Book', new_order_path(package_id: @package) %>
+</div>
+
+
+</div>
+
+

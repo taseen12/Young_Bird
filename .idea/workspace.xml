@@ -2,8 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d70bfa6-32e7-4670-8759-de527bc777be" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/controllers/user_places_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/user_packages/index.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/user_places/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Young_Bird.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Young_Bird.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/home.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/user_hotel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/user_hotels.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/user_package.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/user_packages.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/user_place.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/user_places.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/hotels_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/hotels_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/packages_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/packages_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/places_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/places_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/rooms_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/rooms_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/user_hotel_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/user_hotels_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/user_package_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/user_packages_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/user_place_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/user_hotel_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/user_hotels_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/user_package_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/user_packages_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/user_place_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/user_places_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/room.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/room.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/hotels/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/hotels/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/hotels/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/hotels/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/packages/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/packages/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/packages/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/packages/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/places/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/places/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/rooms/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/rooms/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/rooms/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/rooms/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/user_hotel/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user_hotels/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/user_package/index.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/user_place/index.html.erb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
@@ -12,27 +44,37 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Ruby File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2GikbODF6vVCvKhJXHGKKjZuxcQ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/taseen/Downloads/project/Young_Bird&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/taseen/Downloads/two/twos",
+    "nodejs_package_manager_path": "yarn",
+    "ruby.rails.projectView.checked": "true"
   }
-}</component>
+}]]></component>
   <component name="RubyModuleManagerSettings">
     <option name="blackListedRootsPaths">
       <list>
@@ -45,11 +87,16 @@
       <module name="Young_Bird" />
       <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
@@ -64,11 +111,16 @@
       <module name="Young_Bird" />
       <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
@@ -87,6 +139,11 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="spec" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
@@ -108,6 +165,11 @@
         <env name="RAILS_ENV" value="test" />
       </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="test" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
@@ -126,6 +188,11 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
@@ -161,6 +228,21 @@
       <workItem from="1666938327880" duration="16000" />
       <workItem from="1666939486452" duration="63000" />
       <workItem from="1666940100999" duration="620000" />
+      <workItem from="1666955092637" duration="45000" />
+      <workItem from="1666955270229" duration="260000" />
+      <workItem from="1666955665600" duration="261000" />
+      <workItem from="1666955973804" duration="655000" />
+      <workItem from="1666975976232" duration="599000" />
+      <workItem from="1667021116858" duration="3221000" />
+      <workItem from="1667064442672" duration="1019000" />
+      <workItem from="1667105400823" duration="14220000" />
+      <workItem from="1667147045328" duration="624000" />
+      <workItem from="1667189581499" duration="1091000" />
+      <workItem from="1667277490816" duration="7559000" />
+      <workItem from="1667307824104" duration="595000" />
+      <workItem from="1667361840121" duration="25184000" />
+      <workItem from="1667410108203" duration="599000" />
+      <workItem from="1667448885482" duration="19486000" />
     </task>
     <servers />
   </component>

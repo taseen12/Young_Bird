@@ -1,0 +1,48 @@
+<%= form_with model: @booking do |form| %>
+  <%= form.text_field :name %>
+<% end %>
+<%#= form_with(model: order, local: true) do |form| %>
+  <%# if order.errors.any? %>
+<!--    <div id="error_explanation">-->
+<!--      <h2><%#= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>-->
+
+<!--      <ul>-->
+        <%# order.errors.full_messages.each do |message| %>
+<!--          <li><%#= message %></li>-->
+        <%# end %>
+<!--      </ul>-->
+<!--    </div>-->
+  <%# end %>
+
+<!--  <div class="field">-->
+    <%#= form.label :name %>
+    <%#= form.text_field :name %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :address %>
+    <%#= form.text_area :address %>
+<!--  </div>-->
+<!--  <div class="field">-->
+    <%#= form.label :contact_no %>
+    <%#= form.text_area :contact_no %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :email %>
+    <%#= form.text_field :email %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :check_in_date %>
+    <%#= form.number_field :check_in_date %>
+<!--  </div>-->
+<!--  <div class="field">-->
+    <%#= form.label :check_out_date %>
+    <%#= form.number_field :check_out_date %>
+<!--  </div>-->
+
+<!--  <div class="actions">-->
+    <%#= form.submit %>
+<!--  </div>-->
+<%# end %>
