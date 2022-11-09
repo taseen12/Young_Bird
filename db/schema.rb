@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_03_101000) do
+ActiveRecord::Schema.define(version: 2022_11_09_041442) do
 
   create_table "bookings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 2022_11_03_101000) do
     t.bigint "hotel_id"
     t.bigint "room_id"
     t.bigint "user_id"
+    t.decimal "price", precision: 10, default: "0"
+    t.integer "payment_status", default: 0
     t.index ["hotel_id"], name: "index_bookings_on_hotel_id"
     t.index ["room_id"], name: "index_bookings_on_room_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"

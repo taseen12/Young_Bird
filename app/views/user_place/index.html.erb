@@ -1,0 +1,20 @@
+<% if notice %>
+  <aside id="notice"><%= notice %></aside>
+<% end %>
+
+
+
+<% @places.each do |place| %>
+  <div class="container">
+    <div class="container-fluid mt-3">
+      <div class="row">
+        <div class="col-md-4 border  d-flex flex-column  align-items-center">
+          <div class="place_image w-100"> <%= image_tag(place.img_url) %></div>
+          <h2><%= place.place_name %></h2>
+          <%= link_to 'Check Package',user_package_index_path(place_id: place) %>
+        </div>
+      </div></div></div>
+
+
+
+<% end %>
