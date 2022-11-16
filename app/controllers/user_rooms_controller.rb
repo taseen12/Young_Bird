@@ -27,25 +27,36 @@ class UserRoomsController < ApplicationController
     # puts check_out_date
 
     @rooms.each do |room|
+      if room.bookings.count == 0
+
+        available_rooms << room.id
+      end
       room.bookings.each do |booking|
       # @booking.each do |booking|
       if
-      booking.check_in_date < check_in_date.to_date && booking.check_out_date < check_out_date.to_date || booking.check_in_date > check_in_date.to_date && booking.check_out_date >check_out_date.to_date
-                 available_rooms << room.id
+      booking.check_in_date > check_in_date.to_date && booking.check_in_date > check_out_date.to_date ||
+        booking.check_out_date < check_in_date.to_date && booking.check_out_date <check_out_date.to_date
+
+        available_rooms << room.id
+
+                 puts "ssssssssssssssssssssssssssssssss"
+                 puts "ssssssssssssssssssssssssssssssss"
+                 puts available_rooms
+                 puts "ssssssssssssssssssssssssssssssss"
+                 puts "ssssssssssssssssssssssssssssssss"
                 # available_rooms.push(room.id)
             # else
             #   available_rooms=nil
-      elsif
-      booking.check_in_date = check_in_date.to_date && booking.check_out_date = check_out_date.to_date
-        puts "try again"
-      elsif
-      check_in_date = nil && check_out_date =nil
-        redirect_to user_rooms_index_path
+
       end
 
 
       end
-      end
+    end
+
+    puts "////////////////"
+    puts "////////////////"
+    puts available_rooms
 
 
     session[:available_rooms] = available_rooms.uniq

@@ -1,0 +1,60 @@
+<%= form_with(model: @payment_history) do |form| %>
+  <% if @payment_history.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@payment_history.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+        <% @payment_history.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+      <div class="pay type">
+        <%= form.label :pay_type %>
+        <%= form.number_field :pay_ype %>
+      </div></div>
+
+    <div class="col-sm">
+      <div class="field">
+    <%= form.label :card_number %>
+    <%= form.text_field :card_number %>
+  </div>
+  <div class="field">
+    <%= form.label :pincode %>
+    <%= form.text_area :pincode_digest %>
+  </div>
+  <div class="field">
+    <%= form.label :expiration %>
+    <%= form.date_field :expiration %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount %>
+    <%= form.text_field :amount %>
+  </div>
+</div>
+  <div class=" col">
+  <div class="field">
+    <%= form.label :mobile_no%>
+    <%= form.text_field :mobile_no %>
+  </div>
+  <div class="field disabled">
+    <%= form.label :pincode %>
+    <%= form.text_area :pincode_digest %>
+  </div>
+  <div class="field">
+    <%= form.label :amount %>
+    <%= form.text_field :amount %>
+  </div>
+  </div>
+    </div></div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+
+
+<% end %>

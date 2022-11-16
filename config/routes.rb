@@ -6,12 +6,17 @@ Rails.application.routes.draw do
   get 'user_hotels/index'
   get 'user_places/index'
   get 'user_packages/index'
+  get 'user_packages/details'
+  get 'user_packages/filter'
   get 'search', to: "user_places#search"
   get 'filter_room', to: "user_rooms#filter_room"
+  get 'filters_room', to: "user_packages#filters_room"
   get 'bookings/done'
+  get 'payment_histories/done'
   get 'rooms/justshow'
   resources :packages
   resources :bookings
+  resources :payment_histories
   resources :rooms
   resources :hotels
   resources :places
