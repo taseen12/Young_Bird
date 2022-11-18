@@ -31,8 +31,11 @@ class UserRoomsController < ApplicationController
 
         available_rooms << room.id
       end
-      room.bookings.each do |booking|
+
+
+    room.bookings.each do |booking|
       # @booking.each do |booking|
+
       if
       booking.check_in_date > check_in_date.to_date && booking.check_in_date > check_out_date.to_date ||
         booking.check_out_date < check_in_date.to_date && booking.check_out_date <check_out_date.to_date
@@ -49,6 +52,7 @@ class UserRoomsController < ApplicationController
             #   available_rooms=nil
 
       end
+
 
 
       end

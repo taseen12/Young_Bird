@@ -7,7 +7,20 @@
   <%#= form.date_field :check_out_date %>
 </div>
 <%#= search_form_for @search, url:search_hotels_path, %>
-    <h1>Star rating </h1>
+<h2>Hide Div in JavaScript</h2>
+<div id="myDiv" style="border:1px solid;color:red;">
+  <p>This is a paragraph in Div.</p>
+  <span>This is a span in Div.</span>
+</div>
+<br>
+<button type="button" onclick="changeStyle()">Click Me</button>
+<script>
+    function changeStyle(){
+        var element = document.getElementById("myDiv");
+        element.style.display = "none";
+    }
+</script>
+<h1>Star rating </h1>
 
 <div class="rating">
 
