@@ -18,6 +18,8 @@ class PaymentHistoriesController < ApplicationController
       session[:booking_id]=book.id
       @payment_history = PaymentHistory.new
       @booking = Booking.find(params[:booking_id])
+      # @payment_history.pincode_digest = 345
+      #  @payment_history.pay_type = "bkash"
       # @payment_history.amount = @Booking.price
     end
 
