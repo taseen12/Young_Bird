@@ -5,7 +5,11 @@ class RoomsController < ApplicationController
   # GET /rooms or /rooms.json
   def index
 
-    @room.available_rooms
+    @rooms = Room.all
+  end
+  def justshow
+
+    @rooms = Room.all
   end
 
   # GET /rooms/1 or /rooms/1.json

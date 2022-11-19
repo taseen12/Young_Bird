@@ -1,0 +1,8 @@
+<%= form_with(url: filters_room_path, method: :get, local: true) do |form| %>
+  <%= form.label :check_in_date, "check_in_date :" %>
+  <%= form.date_field :check_in_date %>
+  <%= form.label :check_out_date, "check_out_date:" %>
+  <%= form.date_field :check_out_date %>
+  <%= hidden_field(:package, :package_id, :value => params[:package_id]) %>
+  <%= form.submit "Search" %>
+<% end %>

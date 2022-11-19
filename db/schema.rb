@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_03_101000) do
+ActiveRecord::Schema.define(version: 2022_11_11_110617) do
 
   create_table "bookings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 2022_11_03_101000) do
     t.bigint "hotel_id"
     t.bigint "room_id"
     t.bigint "user_id"
+    t.decimal "price", precision: 10, default: "0"
+    t.integer "payment_status", default: 0
     t.index ["hotel_id"], name: "index_bookings_on_hotel_id"
     t.index ["room_id"], name: "index_bookings_on_room_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
@@ -49,13 +51,25 @@ ActiveRecord::Schema.define(version: 2022_11_03_101000) do
     t.string "img_url"
     t.bigint "place_id", null: false
     t.bigint "hotel_id", null: false
-    t.bigint "room_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "code"
+    t.integer "room_type", default: 1
     t.index ["hotel_id"], name: "index_packages_on_hotel_id"
     t.index ["place_id"], name: "index_packages_on_place_id"
-    t.index ["room_id"], name: "index_packages_on_room_id"
+  end
+
+  create_table "payment_histories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "card_number"
+    t.string "pincode_digest"
+    t.date "expiration"
+    t.decimal "amount", precision: 10
+    t.string "mobile_no"
+    t.integer "pay_type"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "booking_id"
+    t.index ["booking_id"], name: "index_payment_histories_on_booking_id"
   end
 
   create_table "places", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -100,7 +114,7 @@ ActiveRecord::Schema.define(version: 2022_11_03_101000) do
   add_foreign_key "hotels", "places"
   add_foreign_key "packages", "hotels"
   add_foreign_key "packages", "places"
-  add_foreign_key "packages", "rooms"
+  add_foreign_key "payment_histories", "bookings"
   add_foreign_key "rooms", "hotels"
   add_foreign_key "rooms", "places"
 end

@@ -21,15 +21,18 @@
     </div>
     <div class="field">
   <%= form.label :contact_no %>
-  <%= form.text_area :contact_no %>
+  <%= form.text_field :contact_no %>
     </div>
 
     <div class="field">
   <%= form.label :email %>
   <%= form.text_field :email %>
     </div>
-
-    <div class="field">
+  <div class="field">
+    <%= form.label :price%>
+    <%= form.text_field :price %>
+  </div>
+    <div class="field disabled">
   <%= form.label :check_in_date %>
   <%= form.date_field :check_in_date %>
     </div>

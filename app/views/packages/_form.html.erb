@@ -40,6 +40,11 @@
     <%= form.label :img_url %>
     <%= form.text_field :img_url %>
   </div>
+  <div class="field">
+    <%= form.label :room_type %>
+    <%= form.number_field :room_type %>
+  </div>
+
 
   <div class=" control-group">
     <%= form.label :place, class: 'control-group' %>
@@ -53,11 +58,16 @@
     </div></div>
 
 
-  <div class=" control-group">
-    <%= form.label :room, class: 'control-group' %>
-    <div class=" control-group">
-      <%= collection_select(:package, :room_id, Room.all, :id, :room_no, :prompt => true)%>
-    </div></div>
+<!--  <div class=" control-group">-->
+    <%#= form.label :room_type, class: 'control-group' %>
+<!--    <div class=" control-group">-->
+      <%#= collection_select(:package, :room_id, Room.all, :id, :room_type, :prompt => true)%>
+<!--    </div></div>-->
+<!--  <div class=" control-group">-->
+    <%#= form.label :no_of_bed, class: 'control-group' %>
+<!--    <div class=" control-group">-->
+      <%#= collection_select(:package, :room_id, Room.all, :id, :no_of_bed, :prompt => true)%>
+<!--    </div></div>-->
 
   <div class="actions">
     <%= form.submit %>

@@ -1,5 +1,5 @@
 class MyBookingsController < ApplicationController
-  before_action :check_access
+  # before_action :check_access
   def index
 
     #@user = User.includes(:orders).find(params[:user_id])

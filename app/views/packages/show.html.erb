@@ -41,9 +41,13 @@
 </p>
 
 <p>
-  <strong>Room:</strong>
-  <%= @package.room_id %>
+  <strong>Room Type:</strong>
+  <%= @package.room_type %>
 </p>
+<!--<p>-->
+<!--  <strong>No Of Bed:</strong>-->
+  <%#= @package.room.no_of_bed %>
+<!--</p>-->
 
 <%= link_to 'Edit', edit_package_path(@package) %> |
 <%= link_to 'Back', packages_path %>

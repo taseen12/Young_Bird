@@ -1,0 +1,16 @@
+<% @rooms.each do |room| %>
+
+
+  <div class="col-md-4 border d-flex flex-column  align-items-center">
+    <div class="room_image"> <%= image_tag(room.img_url) %></div>
+    <h2><%= room.room_no %></h2>
+    <%= link_to 'Book Room',new_booking_path(room_id: room) %>
+  </div>
+<%end %>
+
+
+
+
+
+</div>
+</div>

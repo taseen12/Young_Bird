@@ -1,19 +1,26 @@
-<% if notice %>
-  <aside id="notice"><%= notice %></aside>
-<% end %>
-
+<%= form_with(url: filter_room_path, method: :get, local: true) do |form| %>
+    <%= form.label :check_in_date, "check_in_date :" %>
+    <%= form.date_field :check_in_date %>
+  <%= form.label :check_out_date, "check_out_date:" %>
+  <%= form.date_field :check_out_date %>
+    <%= form.submit "Search" %>
+  <% end %>
 
 <div class="container">
 
   <div class="row">
+    <%unless @rooms.nil? %>
     <% @rooms.each do |room| %>
 
 
       <div class="col-md-4 border d-flex flex-column  align-items-center">
         <div class="room_image"> <%= image_tag(room.img_url) %></div>
         <h2><%= room.room_no %></h2>
-        <%= link_to 'Book Room',new_booking_path(room_id: room) %>
+        <p><%= "price" %></p>
+        <h2><%= room.price %></h2>
+        <%= link_to 'Book Room',new_booking_path(check_in_date: params[:check_in_date],check_out_date:params[:check_out_date],room_id: room , price: room) %>
       </div>
+        <%end %>
 
 
 

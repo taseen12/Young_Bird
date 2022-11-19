@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Booking</h1>
+
+<table class="table table-dark table-striped">
+  <thead>
+  <tr>
+    <th>Booking id</th>
+    <th>User id</th>
+    <th>Card Number</th>
+    <th>pincode</th>
+    <th>Expiration</th>
+    <th>Amount</th>
+    <th>Mobile no</th>
+
+    <th>paytype</th>
+
+
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @payment_histories.each do |pay| %>
+    <tr>
+      <td><%= pay.booking.id %></td>
+      <td><%= pay.booking.user.id %></td>
+      <td><%= pay.card_number %></td>
+      <td><%= pay.pincode_digest %></td>
+      <td><%= pay.expiration %></td>
+      <td><%= pay.amount %></td>
+      <td><%= pay.mobile_no %></td>
+<!--      <td><%#= pay.check_out_date %></td>-->
+      <td><%= pay.pay_type %></td>
+      <!--      <td><%#= link_to 'Show', booking %></td>-->
+      <!--      <td><%#= link_to 'Edit', edit_booking_path(booking) %></td>-->
+<!--      <td><%#= link_to 'Destroy', booking, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%#= link_to 'New Order', new_booking_path %>
