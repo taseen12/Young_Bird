@@ -21,7 +21,13 @@
       <div class="col-md-4 border d-flex flex-column  align-items-center">
         <div class="hotel_image"> <%= image_tag(hotel.img_url) %></div>
         <h2><%= hotel.hotel_name %></h2>
-        <%= link_to 'Check Package',user_rooms_index_path(hotel_id: hotel) %>
+        <%# if current_user.nil? %>
+<!--          <script type="text/javascript">-->
+<!--              window.location.href=" /users/sign_in"  // put your correct path in a string here-->
+<!--          </script>-->
+          <%# else %>
+        <%= link_to 'Check Rooms',user_rooms_index_path(hotel_id: hotel) %>
+          <%# end %>
       </div>
 
 

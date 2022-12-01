@@ -1,8 +1,7 @@
 class HomeController < ApplicationController
   #before_action :check_access
   def index
-    puts "Hello"
-    puts "Fahim worked here"
+   
   end
   private
   def check_access

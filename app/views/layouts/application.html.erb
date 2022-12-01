@@ -10,7 +10,16 @@
   </head>
 
   <body>
-<%= render 'home/header' %>
+
+
+  <% if current_user.nil? %>
+    <%= render 'home/header' %>
+   <% elsif current_user.admin?%>
+    <%= render 'home/admin_navbar' %>
+ <% else%>
+    <%= render 'home/header' %>
+
+<% end %>
    
   <main class='<%= controller.controller_name %>'>
 

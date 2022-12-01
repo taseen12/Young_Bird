@@ -3,9 +3,9 @@
 <% end %>
 <%= form_with(url: filters_room_path, method: :get, local: true) do |form| %>
   <%= form.label :check_ins_date, "check_in_date :" %>
-  <%= form.date_field :check_ins_date %>
+  <%= form.date_field :check_ins_date,value: Date.today %>
   <%= form.label :check_outs_date, "check_out_date:" %>
-  <%= form.date_field :check_outs_date %>
+  <%= form.date_field :check_outs_date ,value: Date.today%>
   <%= form.submit "Search" %>
 <% end %>
 <div class="container mt-3">

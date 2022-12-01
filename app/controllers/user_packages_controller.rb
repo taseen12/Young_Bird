@@ -1,6 +1,15 @@
 class UserPackagesController < ApplicationController
   def index
-    @packages = Package.order(:package_name)
+    # @packages = Package.order(:package_name)
+
+    begin
+      @place=Place.find_by_id(params[:place_id])
+      @packages=@place.packages
+      puts @place.inspect
+    rescue
+      puts "place not found"
+    end
+
   end
   def details
     @package =Package.find(params[:package_id])
