@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_11_110617) do
+ActiveRecord::Schema.define(version: 2022_12_01_054155) do
 
   create_table "bookings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
@@ -29,6 +29,25 @@ ActiveRecord::Schema.define(version: 2022_11_11_110617) do
     t.index ["hotel_id"], name: "index_bookings_on_hotel_id"
     t.index ["room_id"], name: "index_bookings_on_room_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
+  create_table "card_infos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "card_number"
+    t.string "pincode_digest"
+    t.date "expiration"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "contacts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name"
+    t.string "age"
+    t.string "contact_no"
+    t.string "email_id"
+    t.string "destination"
+    t.string "message"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "hotels", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -77,6 +96,18 @@ ActiveRecord::Schema.define(version: 2022_11_11_110617) do
     t.string "img_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "video_url"
+  end
+
+  create_table "reviews", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.integer "rating"
+    t.string "message"
+    t.bigint "hotel_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["hotel_id"], name: "index_reviews_on_hotel_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "rooms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -115,6 +146,8 @@ ActiveRecord::Schema.define(version: 2022_11_11_110617) do
   add_foreign_key "packages", "hotels"
   add_foreign_key "packages", "places"
   add_foreign_key "payment_histories", "bookings"
+  add_foreign_key "reviews", "hotels"
+  add_foreign_key "reviews", "users"
   add_foreign_key "rooms", "hotels"
   add_foreign_key "rooms", "places"
 end

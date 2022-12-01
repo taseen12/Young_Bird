@@ -1,3 +1,4 @@
+<%= javascript_pack_tag 'payment_history' %>
 <%= form_with(model: @payment_history, class:"form_payment") do |form| %>
   <% if @payment_history.errors.any? %>
     <div id="error_explanation">
@@ -14,48 +15,50 @@
     <div class="row">
       <div class="col-sm">
       <div class ="pay_type">
+        <div class="form-control">
         <%= form.label :pay_type %>
-        <%= form.select :pay_type,PaymentHistory.pay_types.keys,
+        <%= form.select :pay_type,PaymentHistory.pay_types.keys, class: "form-control" ,
                         prompt: 'Select a payment method' %>
+      </div>
       </div>
       </div>
 
     <div class="col-sm">
-      <div id= "credit">
-      <div class="field">
-    <%= form.label :card_number %>
-    <%= form.text_field :card_number %>
+      <div id= "credit" >
+      <div class="form-control">
+    <%= form.label :card_number,class: "form-text text-muted" %>
+    <%= form.text_field :card_number, class: "form-control" %>
   </div>
   <div class="field">
     <%= form.label :pincode %>
-    <%= form.text_area :pincode_digest, class: "pincode", id:'pincode_id' %>
+    <%= form.password_field :pincode_digest, class: "form-control" %>
   </div>
   <div class="field" >
     <%= form.label :expiration %>
-    <%= form.date_field :expiration %>
+    <%= form.date_field :expiration, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :amount %>
-    <%= form.text_field :amount %>
+    <%= form.text_field :amount, class: "form-control",:readonly => true %>
   </div>
 </div>
-    </div>
-  <div class=" col-sm">
-    <div id="bash">
+<!--    </div>-->
+<!--  <div class=" col-sm">-->
+    <div id="bash" >
   <div class="field">
 
 
     <%= form.label :mobile_no%>
-    <%= form.text_field :mobile_no %>
+    <%= form.text_field :mobile_no, class: "form-control" %>
   </div>
   <div class="field disabled">
     <%= form.label :pincode %>
-    <%= form.text_area :pincode_digest %>
+    <%= form.text_area :pincode_digest, class: "form-control" %>
   </div>
   <div class="field">
     <%= form.label :amount %>
-    <%= form.text_field :amount %>
+    <%= form.text_field :amount, class: "form-control",:readonly => true %>
   </div>
   </div>
   </div>
@@ -63,7 +66,7 @@
 
     </div></div>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Payment complete", class:"btn btn-secondary"  %>
   </div>
 
 

@@ -1,3 +1,17 @@
+<%= form_with(model: @review) do |form| %>
+  <% if @review.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@review.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+        <% @review.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+
+  <% end %>
+  <% end %>
 <%#= form.label :check_in_date %>
 <%#= form.date_field :check_in_date %>
 <!--</div>-->
@@ -5,7 +19,18 @@
   <%#= form.label :check_out_date %>
   <%#= form.date_field :check_out_date %>
 <!--</div>-->
-
+<%= form_for @hotel.reviews.find_or_create_by_user_id user.id,
+                                                      :html => {:id => form_id,
+                                                                :class => "star_rating_form"} do |f| %>
+  <%= f.hidden_field :hotel_id, :value => @hotel.id %>
+  <% if signed_in? %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+  <% end %>
+  <%= f.hidden_field :stars, :id => form_id + "_stars" %>
+<% end %>
+<% (1..5).each do |i| %>
+  <li class="rating_star" id="<%= form_id %>_<%= i %>" data-stars="<%= i %>" data-form-id="<%= form_id %>"></li>
+<% end %>
 <% if notice %>
   <aside id="notice"><%= notice %></aside>
 <% end %>
@@ -21,7 +46,13 @@
       <div class="col-md-4 border d-flex flex-column  align-items-center">
         <div class="hotel_image"> <%= image_tag(hotel.img_url) %></div>
         <h2><%= hotel.hotel_name %></h2>
-        <%= link_to 'Check Package',user_rooms_index_path(hotel_id: hotel) %>
+        <%# if current_user.nil? %>
+<!--          <script type="text/javascript">-->
+<!--              window.location.href=" /users/sign_in"  // put your correct path in a string here-->
+<!--          </script>-->
+          <%# else %>
+        <%= link_to 'Check Rooms',user_rooms_index_path(hotel_id: hotel) %>
+          <%# end %>
       </div>
 
 

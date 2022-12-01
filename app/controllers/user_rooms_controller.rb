@@ -3,7 +3,8 @@ class UserRoomsController < ApplicationController
 
   def index
 
-
+    # @room.id=params[:room_id]
+    # @rooms.price=params[:price]
       if session[:available_rooms].present?
         @rooms = Room.where(id: session[:available_rooms])
         session[:available_rooms] = nil
@@ -13,12 +14,18 @@ class UserRoomsController < ApplicationController
   end
   def filter_room
 
+
     check_in_date = params[:check_in_date]
     check_out_date = params[:check_out_date]
 
-
-      @rooms = Room.all
+     # @hotel = Hotel.find(params[:hotel][:hotel_id])
+     # @rooms = Room.find(params[:room_id])
+     #   @rooms = Room.where(hotel_id: @room.hotel_id)
+    # @rooms=Room.where(hotel_id:2)
+    # @rooms= Room.all
+       @rooms = Room.where(hotel_id: params[:hotel][:hotel_id])
       available_rooms =[]
+
 
     # # check_in_date=Date.parse(check_in_date)
     # # check_out_date=Date.parse(check_out_date)
@@ -64,7 +71,7 @@ class UserRoomsController < ApplicationController
 
 
     session[:available_rooms] = available_rooms.uniq
-    redirect_to user_rooms_index_path(check_in_date: params[:check_in_date],check_out_date: params[:check_out_date])
+    redirect_to user_rooms_index_path(check_in_date: params[:check_in_date],check_out_date: params[:check_out_date],hotel_id: params[:hotel_id])
     end
 
   # def filter_room

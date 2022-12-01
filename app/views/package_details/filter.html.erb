@@ -1,7 +1,7 @@
 <%= form_with(url: filter_room_path, method: :get, local: true) do |form| %>
   <%= form.label :check_in_date, "check_in_date :" %>
-  <%= form.date_field :check_in_date %>
+  <%= form.date_field :check_in_date,value: Date.today %>
   <%= form.label :check_out_date, "check_out_date:" %>
-  <%= form.date_field :check_out_date %>
+  <%= form.date_field :check_out_date,value: Date.tomorrow %>
   <%= form.submit "Search" %>
 <% end %>

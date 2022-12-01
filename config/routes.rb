@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'contacts/index'
   get 'payment_histories/index'
   get 'my_bookings/index'
   get 'user_rooms/index'
@@ -12,10 +13,12 @@ Rails.application.routes.draw do
   get 'filter_room', to: "user_rooms#filter_room"
   get 'filters_room', to: "user_packages#filters_room"
   get 'bookings/done'
+  get 'contacts/done'
   get 'payment_histories/done'
   get 'rooms/justshow'
   resources :packages
   resources :bookings
+  resources :contacts
   resources :payment_histories
   resources :rooms
   resources :hotels
