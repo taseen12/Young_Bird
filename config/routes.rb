@@ -5,10 +5,13 @@ Rails.application.routes.draw do
   get 'user_rooms/index'
   get 'package_details/index'
   get 'user_hotels/index'
+  get 'user_hotels/details'
   get 'user_places/index'
   get 'user_packages/index'
   get 'user_packages/details'
   get 'user_packages/filter'
+  get 'details', to: "user_hotels#details"
+  post 'rating', to: "user_hotels#set_hotel_rating"
   get 'search', to: "user_places#search"
   get 'filter_room', to: "user_rooms#filter_room"
   get 'filters_room', to: "user_packages#filters_room"
