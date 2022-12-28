@@ -59,6 +59,7 @@
 //}
 
 .bookings{
+
   margin: 0;
   background: linear-gradient(120deg,#2980b9, #8e44ad);
   min-height: 100vh;
@@ -118,11 +119,11 @@
   .form{
     padding: 0 40px;
     box-sizing: border-box;}
-    .field{
+    .field {
       position: relative;
       border-bottom: 2px solid #adadad;
       margin: 30px 0;
-    }
+    }}
   //.actions{
   //  width: 200px;
   //  width: 100%;
@@ -150,6 +151,6 @@
     cursor: pointer;
     outline: none;
 
-  }
+
 }
 

@@ -1,7 +1,10 @@
 class HomeController < ApplicationController
   #before_action :check_access
   def index
-   
+    @hotels=Hotel.order(count: :DESC).limit(3)
+    @hotel=Hotel.order(rating: :DESC).limit(3)
+    # @places= Place.(count: )
+    # @hotels=Hotel.all
   end
   private
   def check_access

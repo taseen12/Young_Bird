@@ -1,0 +1,23 @@
+<% if notice %>
+  <aside id="notice"><%= notice %></aside>
+<% end %>
+
+
+<div class="container">
+
+  <div class="row">
+    <% @places.each do |place| %>
+
+
+      <div class="col-md-4 border d-flex flex-column  align-items-center">
+        <div class="place_image"> <%= image_tag(place.img_url) %></div>
+        <h2><%= place.place_name %></h2>
+        <%= link_to 'Check Video', video_tours_details_path(place_id: place) %>
+      </div>
+
+
+
+
+    <% end %>
+  </div>
+</div>

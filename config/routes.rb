@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'video_tours/index'
+  # resources :blogs
   get 'contacts/index'
   get 'payment_histories/index'
   get 'my_bookings/index'
@@ -10,6 +12,8 @@ Rails.application.routes.draw do
   get 'user_packages/index'
   get 'user_packages/details'
   get 'user_packages/filter'
+  get 'video_tours/index'
+  get 'video_tours/details'
   get 'details', to: "user_hotels#details"
   post 'rating', to: "user_hotels#set_hotel_rating"
   get 'search', to: "user_places#search"
@@ -19,6 +23,7 @@ Rails.application.routes.draw do
   get 'contacts/done'
   get 'payment_histories/done'
   get 'rooms/justshow'
+  get 'blogs/my_blog'
   resources :packages
   resources :bookings
   resources :contacts
@@ -26,7 +31,11 @@ Rails.application.routes.draw do
   resources :rooms
   resources :hotels
   resources :places
-  root to: 'home#index'
   devise_for :users
+  root to: 'home#index'
+
+  # scope module: "users" do
+  resources :blogs
+  # end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

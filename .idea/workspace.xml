@@ -5,17 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d70bfa6-32e7-4670-8759-de527bc777be" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/user_hotels/details.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20221208121509_add_rating_to_hotels.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Young_Bird.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Young_Bird.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/bookings.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/bookings.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/home.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/user_hotels.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/user_hotels.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/user_packages.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/user_packages.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/user_rooms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/user_rooms.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/bookings_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/bookings_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/user_hotels_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/user_hotels_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/hotel.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/hotel.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/place.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/place.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/review.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/review.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/packs/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/_header.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/_header.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/user_hotels/details.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user_hotels/details.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/user_hotels/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user_hotels/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/user_packages/filter.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user_packages/filter.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/user_places/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user_places/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/user_rooms/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user_rooms/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,7 +288,21 @@
       <workItem from="1670489807161" duration="2032000" />
       <workItem from="1670492212387" duration="5855000" />
       <workItem from="1670499632460" duration="4345000" />
-      <workItem from="1670559864163" duration="2075000" />
+      <workItem from="1670559864163" duration="6506000" />
+      <workItem from="1670759841318" duration="25000" />
+      <workItem from="1670821470249" duration="7608000" />
+      <workItem from="1670912100322" duration="8902000" />
+      <workItem from="1670992723276" duration="1236000" />
+      <workItem from="1671347930166" duration="7001000" />
+      <workItem from="1671424544921" duration="9872000" />
+      <workItem from="1671510976260" duration="13496000" />
+      <workItem from="1671614456461" duration="1197000" />
+      <workItem from="1671683754915" duration="13572000" />
+      <workItem from="1671770153592" duration="2193000" />
+      <workItem from="1671905693045" duration="1197000" />
+      <workItem from="1672030513595" duration="8063000" />
+      <workItem from="1672078515198" duration="9082000" />
+      <workItem from="1672151985764" duration="4702000" />
     </task>
     <servers />
   </component>

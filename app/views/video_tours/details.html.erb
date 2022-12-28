@@ -1,0 +1,24 @@
+<% if notice %>
+  <aside id="notice"><%= notice %></aside>
+<% end %>
+
+
+<div class="container">
+
+  <div class="row">
+    <%# @places.each do |place| %>
+
+
+      <div class="col-md-4 border d-flex flex-column  align-items-center">
+<!--        <div class="place_image"> <%#= image_tag(place.img_url) %></div>-->
+        <iframe src='https://www.youtube.com/embed/<%= @place.video_url %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
+
+        <%#= link_to 'Check Video', video_tours_details_path(place_id: place) %>
+      </div>
+
+
+
+
+    <%# end %>
+  </div>
+</div>

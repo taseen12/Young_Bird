@@ -1,3 +1,10 @@
+<section class="book">
+
+  <div class="container flex_space">
+    <div class="text">
+      <h1> <span> Search </span> Available Rooms </h1>
+    </div>
+    <div class="grid">
 <%= form_with(url: filters_room_path, method: :get, local: true) do |form| %>
   <%= form.label :check_in_date, "check_in_date :" %>
   <%= form.date_field :check_in_date,value: Date.today %>
@@ -6,3 +13,4 @@
   <%= hidden_field(:package, :package_id, :value => params[:package_id]) %>
   <%= form.submit "Search" %>
 <% end %>
+    </div></div></section>

@@ -12,6 +12,9 @@
       <div class="col-md-4 border d-flex flex-column  align-items-center">
         <div class="place_image"> <%= image_tag(place.img_url) %></div>
         <h2><%= place.place_name %></h2>
+<!--        <iframe src='https://www.youtube.com/embed/<%#= place.video_url %>?rel=0&autoplay=<%#= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>-->
+
+
         <%= link_to 'Check Package',user_packages_index_path(place_id: place) %>
       </div>
 

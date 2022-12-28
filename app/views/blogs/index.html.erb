@@ -1,0 +1,45 @@
+<!--<p id="notice"><%#= notice %></p>-->
+
+<!--<h1>Blogs</h1>-->
+
+<!--<table>-->
+<!--  <thead>-->
+<!--    <tr>-->
+<!--      <th>Title</th>-->
+<!--      <th>Description</th>-->
+<!--      <th>Text</th>-->
+<!--      <th>Published</th>-->
+<!--      <th>Published at</th>-->
+<!--      <th>User</th>-->
+<!--      <th colspan="3"></th>-->
+<!--    </tr>-->
+<!--  </thead>-->
+
+<!--  <tbody>-->
+    <%# @blogs.each do |blog| %>
+<!--      <tr>-->
+<!--        <td><%#= blog.title %></td>-->
+<!--        <td><%#= blog.description %></td>-->
+<!--        <td><%#= blog.text %></td>-->
+<!--        <td><%#= blog.published %></td>-->
+<!--        <td><%#= blog.published_at %></td>-->
+<!--        <td><%#= blog.user_id %></td>-->
+<!--        <td><%#= link_to 'Show', blog %></td>-->
+<!--        <td><%#= link_to 'Edit', edit_blog_path(blog) %></td>-->
+<!--        <td><%#= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+<!--      </tr>-->
+    <%# end %>
+<!--  </tbody>-->
+<!--</table>-->
+
+<!--<br>-->
+<%= link_to 'My Blog', blogs_my_blog_path(blog_id: @blog) %>
+<% @blogs.each do |blog| %>
+<div style="width: 100%; height: 300px; overflow-y:hidden">
+  <%= image_tag(blog.banner,style: 'width: 100%') %>
+</div>
+  <%= blog.body %>
+<%= blog.title %>
+  <% end %>
+
+<%= link_to 'New Blog', new_blog_path %>

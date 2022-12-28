@@ -1,28 +1,95 @@
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-  Launch demo modal
+<h1 class="text-center bg-danger"> Kindly give us rating </h1>
+<div class="modalss">
+
+<!--  <div class="col-md-12 bg-light text-right">-->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Give Ratings
 </button>
+</div>
+
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <h2 class="modal-title text-allignment-center bg-danger " id="exampleModalLabel">Give Your Hotel Ratings Here</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+
+<!--          <span class="close">&times;</span>-->
+          <%= form_with(url: rating_path, method: :post, local: true) do |h| %>
+            <%#= form.label :check_in_date, "check_in_date :" %>
+          <div class="field">
+            <div class="form-control">
+              <label for="exampleInputEmail1">Rating</label>
+              <%= number_field_tag :ratting,   max: 10, min:4 %>
+              <%#= form.text_field :price, :readonly => true,class: "form-control"  %>
+            </div>
+
+              <div class="form-control">
+                <label for="exampleInputEmail1">Message</label>
+                <%= text_field_tag :messsage %>
+                <%#= form.text_field :price, :readonly => true,class: "form-control"  %>
+              </div>
+
+<!--            message <%#= text_field_tag :messsage %>-->
+            <%= hidden_field(:hotel, :hotel_id, :value => params[:hotel_id]) %>
+            <%= hidden_field(:user, :user_id, :value => current_user&.id )%>
+            <%= submit_tag "Submit", class:"btn btn-primary"  %>
+          <% end %>
+        </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+<!--        <button type="button" class="btn btn-primary">Save changes</button>-->
+        <%#= submit_tag "Submit", class:"btn btn-primary"   %>
       </div>
     </div>
   </div>
 </div>
+  </div></div>
+
+
+<!--<div class="container mt-5">-->
+<!--  <div class="modal   "-->
+<!--</div>-->
+
+
+
+
+
+
+
+
+<!--<span class="fa fa-star"></span>-->
+<!-- Button trigger modal-->
+<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">-->
+<!--  Launch demo modal-->
+<!--</button>-->
+
+<!-- Modal-->
+<!--<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">-->
+<!--  <div class="modal-dialog" role="document">-->
+<!--    <div class="modal-content">-->
+<!--      <div class="modal-header">-->
+<!--        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>-->
+<!--        <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--          <span aria-hidden="true">&times;</span>-->
+<!--        </button>-->
+<!--      </div>-->
+<!--      <div class="modal-body">-->
+<!--        ...-->
+<!--      </div>-->
+<!--      <div class="modal-footer">-->
+<!--        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+<!--        <button type="button" class="btn btn-primary">Save changes</button>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
 
 
 
@@ -40,16 +107,17 @@
 
 
 
-<h1> ....................... </h1>
-<h2>Modal Example</h2>
+<!--<h1> ....................... </h1>-->
+<!--<h2>Modal Example</h2>-->
 
-<!-- Trigger/Open The Modal -->
-<button id="myBtn">Open Modal</button>
+<!-- Trigger/Open The Modal-->
+<!--1st one-->
+<button id="myBtn">Give Review </button>
 
-<!-- The Modal -->
+
 <div id="myModal" class="modal">
 
-  <!-- Modal content -->
+  Modal content
   <div class="modal-content">
     <span class="close">&times;</span>
     <%= form_with(url: rating_path, method: :post, local: true) do |h| %>
@@ -74,7 +142,7 @@ var btn = document.getElementById("myBtn");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
+// When the user clicks the button, open the modal
 btn.onclick = function() {
   modal.style.display = "block";
 }
@@ -103,13 +171,31 @@ window.onclick = function(event) {
       <%#= image_tag(@hotel.img_url) %>
       <h2><%= @hotel.hotel_name %></h2>
       <h2><%= @hotel.rating.to_f %></h2>
-      <%# if current_user.nil? %>
-<!--          <script type="text/javascript">-->
-<!--              window.location.href=" /users/sign_in"  // put your correct path in a string here-->
-<!--          </script>-->
-        <%# else %>
+<!--      <h2><%#= @hotel.reviews.message%></h2>-->
+
+      <div class="rating">
+      <%  @hotel.rating.to_i.times do  %>
+<!--        <i class="bi bi-star"></i>-->
+
+<!--  <input name="review[rating]" id="e5"  value="5"><label for="e5">★</label>-->
+
+          <span> ★ </span>
+
+      <% end %></div>
+      <% @review.each do |rev| %>
+
+<!--        <h2><%#= rev.message%></h2>-->
+      <% end %>
+      </p>
+    </div>
+    </div>
+      <% if current_user.nil? %>
+          <script type="text/javascript">
+              window.location.href=" /users/sign_in"  // put your correct path in a string here
+          </script>
+        <% else %>
       <%= link_to 'Check Rooms',user_rooms_index_path(hotel_id: @hotel) %>
-        <%# end %>
+        <% end %>
     </div>
 
 

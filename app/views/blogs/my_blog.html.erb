@@ -1,0 +1,40 @@
+<% if notice %>
+  <aside id="notice"><%#= notice %></aside>
+<% end %>
+<!--<table class="table table-dark table-striped">-->
+<!--  <thead>-->
+<!--  <tr>-->
+<!--    <th>user ID</th>\-->
+<!--    <th>Order ID</th>-->
+<!--    <th>user name</th>-->
+<!--    <th>Room no</th>-->
+<!--    <th>Price</th>-->
+
+<!--  </tr>-->
+<!--  </thead>-->
+<!--  <tbody>-->
+  <%#= @user.orders%>
+
+  <% @user.blogs.each do |blog| %>
+  <div style="width: 100%; height: 300px; overflow-y:hidden">
+    <%= image_tag(blog.banner,style: 'width: 100%') %>
+  </div>
+    <%= @user.id%>
+    <%= blog.id %>
+
+ <%= blog.title %>
+
+<!--      <td><%#= @user.id%></td>-->
+<!--      <td> <%#= blog.id %></td>-->
+<!--      <td> <%#= blog.title %></td>-->
+
+
+<!--      <td><%#= blog.price%></td>-->
+<!--    </tr>-->
+  <% end %>
+<!--        <td><%#= link_to 'Edit', edit_blog_path(blog_id: @blog) %></td>-->
+<!--        <td><%#= link_to 'Destroy', blog_id: @blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+<!--  </tbody>-->
+<!--</table>-->
+
+

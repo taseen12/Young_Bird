@@ -1,46 +1,171 @@
 <%= javascript_pack_tag 'home' %>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!--<section class="home">-->
+<!--  <div class="content">-->
+<!--    <div class="owl-carousel">-->
+<!--      <div class="owl-carousel owl-theme">-->
+<!--        <div class="item"><%#= image_tag 'z1.jpeg' %></div>-->
+<!--        <div class="item2"><%#= image_tag 'z2.jpeg' %></div>-->
+<!--        <div class="item"><%#= image_tag 'z2.jpeg' %></div>-->
+
+
+
+<!--      </div>-->
+
+<!--  <div class="text">-->
+<!--    <h1> Spent Your Holiday </h1>-->
+<!--    <p> A day Without a laughter is a waste </p>-->
+<!--    <div class="flex">-->
+<!--      <button class=" primary-btn"> Read More </button>-->
+<!--      <button class=" primary-btn"> Contact Us </button>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--      </div>-->
+<!--  </div>-->
+<!--  </div>-->
+<!--</section>-->
+<!--<script>-->
+<!--$('.owl-carousel').owlCarousel({-->
+<!--loop:true,-->
+<!--margin: 0,-->
+<!--nav:true,-->
+<!--    dots: false,-->
+<!--responsive:{-->
+<!--0:{-->
+<!--items: 1-->
+<!--},-->
+<!--768:{-->
+<!--items: 1-->
+<!--},-->
+<!--1000:{-->
+<!--items: 1-->
+<!--}-->
+<!--}-->
+<!--})-->
+<!--</script>-->
+
 <%#  @review.rating.to_i.times do  %>
 <!--  <i class="bi bi-star-fill"></i>-->
 <!--<%# end %></p> </div>-->
 
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<div class="carousel slide" id="myCarousel" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li class="active" data-slide-to="0" data-target="#myCarousel">
-    </li>
-    <li data-slide-to="1" data-target="#myCarousel">
-    </li>
-    <li data-slide-to="2" data-target="#myCarousel">
-    </li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="item active">
-      <%= image_tag 'z1.jpeg' %>
+
+<div class=" slider">
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-    <div class="item">
-      <%= image_tag 'z2.jpeg' %>
+    <div class="carousel-inner">
+      <div class="carousel-item active imagecontainer">
+<!--        <img src="z1.jpeg" class="d-block w-100" alt="...">-->
+        <%= image_tag 'z2.jpeg', :class =>"d-block w-100 h-100" %>
+
+        <div class="w-100 h-100 overlay"></div>
+        <div class="info mt-3">
+          <h1 class="title mb-3">Dare To Live The Life You’ve Always Wanted </h1>
+          <h5 class="description mb-3">TRAVELLING IS A THERAPY</h5>
+          <div class="d-flex">
+            <button class="btn1">Read Me</button>
+            <button class="btn2">Contact Us</button>
+          </div>
+
+        </div>
+      </div>
+      <div class="carousel-item imagecontainer">
+<!--        <img src="z2.jpeg" class="d-block w-100" alt="...">-->
+        <%= image_tag 's.jpg', :class =>"d-block w-100 h-100" %>
+        <div class="w-100 h-100 overlay"></div>
+        <div class="info mt-3">
+
+          <h1 class="title mb-3">Dare To Live The Life You’ve Always Wanted</h1>
+          <h5 class="description mb-3">TRAVELLING IS A THERAPY</h5>
+          <div class="d-flex">
+            <button class="btn1">Read Me </button>
+            <button class="btn2">Contact Us</button>
+          </div>
+
+        </div>
+      </div>
+      <div class="carousel-item imagecontainer">
+<!--        <img src="z1.jpeg" class="d-block w-100" alt="...">-->
+        <%= image_tag 'japan-2014618_960_720.jpg', :class =>"d-block w-100 h-100" %>
+        <div class="w-100 h-100 overlay"></div>
+        <div class="info mt-3">
+          <h1 class="title mb-3">Dare To Live The Life You’ve Always Wanted</h1>
+          <h5 class="description mb-3">TRAVELLING IS A THERAPY</h5>
+
+
+          <div class="d-flex">
+            <button class="btn1">Read Me</button>
+            <button class="btn2">Contact us</button>
+          </div>
+
+        </div>
+      </div>
     </div>
-<!--    <script type="text/javascript">-->
-<!--        $(document).ready(function(){-->
-<!--            $("#myCarousel").carousel({-->
-<!--                interval : 3600,-->
-<!--                pause: true-->
-<!--            });-->
-<!--        });-->
-<!--    </script>-->
-<!--    <div class="item">-->
-      <%#= image_tag 'image_3.jpg' %>
-<!--    </div>-->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
 </div>
+
+<h1 class=" text-center bg-danger"> Top Booked Hotels </h1>
+<div class="row">
+
+  <% @hotels.each do |hotel| %>
+
+
+    <div class="col-md-4 border d-flex flex-column  align-items-center">
+      <div class="place_image"> <%= image_tag(hotel.img_url) %></div>
+      <h2><%= hotel.hotel_name %></h2>
+      <%#= link_to 'Check Package',user_packages_index_path(place_id: place) %>
+    </div>
+
+
+
+
+  <% end %>
+</div>
+<h1 class=" text-center bg-danger"> Top Rated Hotels </h1>
+<div class="row">
+
+  <% @hotel.each do |hotel| %>
+
+
+    <div class="col-md-4 border d-flex flex-column  align-items-center">
+      <div class="place_image"> <%= image_tag(hotel.img_url) %></div>
+      <h2><%= hotel.hotel_name %></h2>
+      <%#= link_to 'Check Package',user_packages_index_path(place_id: place) %>
+    </div>
+
+
+
+
+  <% end %>
+</div>
+<!--  <div class="col-md-4">-->
+<!--    <div class="card" style="width: 18rem;">-->
+<!--      <img src="..." class="card-img-top" alt="...">-->
+<!--      <div class="card-body">-->
+<!--        <h5 class="card-title">Card title</h5>-->
+<!--        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--        <a href="#" class="btn btn-primary">Go somewhere</a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+
 <!--<h1> show image</h1>-->
 <!--<img src=""id="image">-->
 <!--<script type="text/javascript">-->
@@ -132,6 +257,50 @@
 <!--  </div>-->
 <!--</header>-->
 
+
+<h1 class = " text-center bg-danger" > About Us </h1>
+<section class="about top">
+  <div class="container d-flex">
+    <div class="left">
+      <div class="heading">
+        <h1>WELCOME</h1>
+        <h2>Young Bird</h2>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <button class="primary-btn">ABOUT US</button>
+    </div>
+    <div class="right">
+<!--      <img src="images/about.png" alt="">-->
+      <%= image_tag 'about.png' %>
+    </div>
+  </div>
+</section>
+
+<section class="counter top">
+  <div class="container grid d-flex">
+    <div class="box">
+      <h1>2500</h1>
+      <hr>
+      <span>Customer</span>
+    </div>
+    <div class="box">
+      <h1>1250</h1>
+      <hr>
+      <span>Happy Customer</span>
+    </div>
+    <div class="box">
+      <h1>150</h1>
+      <hr>
+      <span>Expert Technicians</span>
+    </div>
+    <div class="box">
+      <h1>3550</h1>
+      <hr>
+      <span>Desktop Reaired</span>
+    </div>
+  </div>
+</section>
 
 
 
@@ -715,380 +884,139 @@
 
 
 
+<div class="container">
+  <div class="row">
+    <div class="splide">
+      <div class="splide__track">
+        <div class="splide__list">
+          <div class="col-sm-4 splide__slide m-2">
+            <div class="card bg-dark text-white">
+              <div class="card-body">
+                <h5 class="card-title text-center ">Crad Slider 1 </h5>
+                <p class="card-text">With supporting text below as a natural lead-in to
+                  additional content.</p>
+                <a href="#" class="btn btn-primary text-center">Read more</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 splide__slide m-2">
+            <div class="card bg-dark text-white">
+              <div class="card-body">
+                <h5 class="card-title text-center">Crad Slider 2</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to
+                  additional content.</p>
+                <a href="#" class="btn btn-primary text-center">Read more</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 splide__slide m-2">
+            <div class="card bg-dark text-white">
+              <div class="card-body">
+                <h5 class="card-title text-center ">Crad Slider 3</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to
+                  additional content.</p>
+                <a href="#" class="btn btn-primary text-center">Read more</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 splide__slide m-2">
+            <div class="card bg-dark text-white">
+              <div class="card-body">
+                <h5 class="card-title">Crad Slider 4</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to
+                  additional content.</p>
+                <a href="#" class="btn btn-primary">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+<script>
+    var splide = new Splide('.splide', {
+        type: 'loop',
+        perPage: 3,
+        rewind: true,
+    });
+
+    splide.mount();
+</script>
 <!--
   - #FOOTER
 -->
-
-<footer class="footer" style="background-image: url('footer-bg.png')">
+<div class="content">
   <div class="container">
+    <div class="single-content">
+      <h1>Website Content</h1>
+    </div>
+  </div>
+</div>
 
-    <div class="footer-top">
-
-      <ul class="footer-list">
-
-        <li>
-          <p class="footer-list-title">Top destination</p>
-        </li>
-
-        <li>
-          <a href="#" class="footer-link">Indonesia, Jakarta</a>
-        </li>
-
-        <li>
-          <a href="#" class="footer-link">Maldives, Malé</a>
-        </li>
-
-        <li>
-          <a href="#" class="footer-link">Australia, Canberra</a>
-        </li>
-
-        <li>
-          <a href="#" class="footer-link">Thailand, Bangkok</a>
-        </li>
-
-        <li>
-          <a href="#" class="footer-link">Morocco, Rabat</a>
-        </li>
-
-      </ul>
-
-      <ul class="footer-list">
-
-        <li>
-          <p class="footer-list-title">Categories</p>
-        </li>
-
-        <li>
-          <a href="#" class="footer-link">Travel</a>
-        </li>
-
-        <li>
-          <a href="#" class="footer-link">Lifestyle</a>
-        </li>
-
-        <li>
-          <a href="#" class="footer-link">Fashion</a>
-        </li>
-
-        <li>
-          <a href="#" class="footer-link">Education</a>
-        </li>
-
-        <li>
-          <a href="#" class="footer-link">Food & Drink</a>
-        </li>
-
-      </ul>
-
-      <ul class="footer-list">
-
-        <li>
-          <p class="footer-list-title">Quick links</p>
-        </li>
-
-        <li>
-          <a href="#" class="footer-link">About</a>
-        </li>
-
-        <li>
-          <a href="#" class="footer-link">Contact</a>
-        </li>
-
-        <li>
-          <a href="#" class="footer-link">Tours</a>
-        </li>
-
-        <li>
-          <a href="#" class="footer-link">Booking</a>
-        </li>
-
-        <li>
-          <a href="#" class="footer-link">Terms & Conditions</a>
-        </li>
-
-      </ul>
-
-      <div class="footer-list">
-
-        <p class="footer-list-title">Get a newsletter</p>
-
-        <p class="newsletter-text">
-          For the latest deals and tips, travel no further than your inbox
-        </p>
-
-        <form action="" class="newsletter-form">
-          <input type="email" name="email" required placeholder="Email address" class="newsletter-input">
-
-          <button type="submit" class="btn btn-primary">Subscribe</button>
-        </form>
-
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-sm-6">
+        <div class="single-box">
+          <img src="img/logo.png" alt="">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam repellendus sunt praesentium aspernatur iure molestias.</p>
+          <h3>We Accect</h3>
+          <div class="card-area">
+            <i class="fa fa-cc-visa"></i>
+            <i class="fa fa-credit-card"></i>
+            <i class="fa fa-cc-mastercard"></i>
+            <i class="fa fa-cc-paypal"></i>
+          </div>
+        </div>
       </div>
-
+      <div class="col-lg-3 col-sm-6">
+        <div class="single-box">
+          <h2>Hosting</h2>
+          <ul>
+            <li><a href="#">Web Hosting</a></li>
+            <li><a href="#">Cloud Hosting</a></li>
+            <li><a href="#">CMS Hosting</a></li>
+            <li><a href="#">WordPress Hosting</a></li>
+            <li><a href="#">Email Hosting</a></li>
+            <li><a href="#">VPS Hosting</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="single-box">
+          <h2>Domain</h2>
+          <ul>
+            <li><a href="#">Web Domain</a></li>
+            <li><a href="#">Cloud Domain</a></li>
+            <li><a href="#">CMS Domain</a></li>
+            <li><a href="#">WordPress Domain</a></li>
+            <li><a href="#">Email Domain</a></li>
+            <li><a href="#">VPS Domain</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="single-box">
+          <h2>Newsletter</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur doloremque earum similique fugiat nobis. Facere?</p>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Enter your Email ..." aria-describedby="basic-addon2">
+            <span class="input-group-text" id="basic-addon2"><i class="fa fa-long-arrow-right"></i></span>
+          </div>
+          <h2>Follow us on</h2>
+          <p class="socials">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-dribbble"></i>
+            <i class="fa fa-pinterest"></i>
+            <i class="fa fa-twitter"></i>
+          </p>
+        </div>
+      </div>
     </div>
-
-    <div class="footer-bottom">
-
-      <a href="#" class="logo">Tourest</a>
-
-      <p class="copyright">
-        &copy; 2022 <a href="#" class="copyright-link">codewithsadee</a>. All Rights Reserved
-      </p>
-
-      <ul class="social-list">
-
-        <li>
-          <a href="#" class="social-link">
-            <ion-icon name="logo-facebook"></ion-icon>
-          </a>
-        </li>
-
-        <li>
-          <a href="#" class="social-link">
-            <ion-icon name="logo-twitter"></ion-icon>
-          </a>
-        </li>
-
-        <li>
-          <a href="#" class="social-link">
-            <ion-icon name="logo-instagram"></ion-icon>
-          </a>
-        </li>
-
-        <li>
-          <a href="#" class="social-link">
-            <ion-icon name="logo-linkedin"></ion-icon>
-          </a>
-        </li>
-
-        <li>
-          <a href="#" class="social-link">
-            <ion-icon name="logo-google"></ion-icon>
-          </a>
-        </li>
-
-      </ul>
-
-    </div>
-
   </div>
 </footer>
-
-
-
-
-
-<!--
-  - #GO TO TOP
--->
-
-<a href="#top" class="go-top" data-go-top aria-label="Go To Top">
-  <ion-icon name="chevron-up-outline"></ion-icon>
-</a>
-
-
-
-
-
-<!--
-  - custom js link
--->
-<!--<script src="./assets/js/script.js"></script>-->
-
-<!--
-  - ionicon link
--->
-<!--<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>-->
-<!--<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>-->
-<!-- Footer -->
-<footer class="bg-dark text-center text-white">
-  <!-- Grid container -->
-  <div class="container p-4">
-    <!-- Section: Social media -->
-    <section class="mb-4">
-      <!-- Facebook -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-      ><i class="fab fa-facebook-f"></i
-      ></a>
-
-      <!-- Twitter -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-      ><i class="fab fa-twitter"></i
-      ></a>
-
-      <!-- Google -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-      ><i class="fab fa-google"></i
-      ></a>
-
-      <!-- Instagram -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-      ><i class="fab fa-instagram"></i
-      ></a>
-
-      <!-- Linkedin -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-      ><i class="fab fa-linkedin-in"></i
-      ></a>
-
-      <!-- Github -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-      ><i class="fab fa-github"></i
-      ></a>
-      <a class="link-dark" href="#">
-        <svg class="bi" width="24" height="24">
-       <use xlink:href="#twitter"></use>
-        </svg>
-      </a>
-    </section>
-    <!-- Section: Social media -->
-
-    <!-- Section: Form -->
-    <section class="">
-      <form action="">
-        <!--Grid row-->
-        <div class="row d-flex justify-content-center">
-          <!--Grid column-->
-          <div class="col-auto">
-            <p class="pt-2">
-              <strong>Sign up for our newsletter</strong>
-            </p>
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-md-5 col-12">
-            <!-- Email input -->
-            <div class="form-outline form-white mb-4">
-              <input type="email" id="form5Example21" class="form-control" />
-              <label class="form-label" for="form5Example21">Email address</label>
-            </div>
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-auto">
-            <!-- Submit button -->
-            <button type="submit" class="btn btn-outline-light mb-4">
-              Subscribe
-            </button>
-          </div>
-          <!--Grid column-->
-        </div>
-        <!--Grid row-->
-      </form>
-    </section>
-    <!-- Section: Form -->
-
-    <!-- Section: Text -->
-    <section class="mb-4">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-        eum harum corrupti dicta, aliquam sequi voluptate quas.
-      </p>
-    </section>
-    <!-- Section: Text -->
-
-    <!-- Section: Links -->
-    <section class="">
-      <!--Grid row-->
-      <div class="row">
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Links</h5>
-
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a href="#!" class="text-white">Link 1</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 2</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 3</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 4</a>
-            </li>
-          </ul>
-        </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Links</h5>
-
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a href="#!" class="text-white">Link 1</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 2</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 3</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 4</a>
-            </li>
-          </ul>
-        </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Links</h5>
-
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a href="#!" class="text-white">Link 1</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 2</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 3</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 4</a>
-            </li>
-          </ul>
-        </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Links</h5>
-
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a href="#!" class="text-white">Link 1</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 2</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 3</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 4</a>
-            </li>
-          </ul>
-        </div>
-        <!--Grid column-->
-      </div>
-      <!--Grid row-->
-    </section>
-    <!-- Section: Links -->
-  </div>
-  <!-- Grid container -->
-
-  <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2020 Copyright:
-    <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
-</footer>
-<!-- Footer -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/js/bootstrap.min.js">

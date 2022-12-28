@@ -77,6 +77,13 @@ class BookingsController < ApplicationController
     #order = current_user.orders.build(order_params)
 
     @booking.user_id = current_user.id
+    room=Room.find_by_id(@booking.room_id)
+
+    hotel=room.hotel
+
+    hotel.count=hotel.count+1
+
+    hotel.save
 
     # respond_to do |format|
     #   if @booking.save
