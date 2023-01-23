@@ -1,4 +1,4 @@
-<h1 class="text-center bg-danger"> Kindly give us rating </h1>
+<h1 class="text-center bg-success"> Kindly give us rating </h1>
 <div class="modalss">
 
 <!--  <div class="col-md-12 bg-light text-right">-->
@@ -112,7 +112,7 @@
 
 <!-- Trigger/Open The Modal-->
 <!--1st one-->
-<button id="myBtn">Give Review </button>
+<!--<button id="myBtn">Give Review </button>-->
 
 
 <div id="myModal" class="modal">
@@ -167,23 +167,23 @@ window.onclick = function(event) {
 
 
     <div class="col-md-4 border d-flex flex-column  align-items-center">
-      <div class="hotel_image"> <%= image_tag(@hotel.img_url) %></div>
+      <div class="image-resize">
+        <%= image_tag(@hotel.img_url, :class => "img_fluid") %>
+      </div>
       <%#= image_tag(@hotel.img_url) %>
-      <h2><%= @hotel.hotel_name %></h2>
-      <h2><%= @hotel.rating.to_f %></h2>
+      <h2>Name : <%= @hotel.hotel_name %></h2>
+      <h2>Ratings :  <%= @hotel.rating.to_f %></h2>
 <!--      <h2><%#= @hotel.reviews.message%></h2>-->
 
       <div class="rating">
-      <%  @hotel.rating.to_i.times do  %>
+        <h4> Ratings with star : <%  @hotel.rating.to_i.times do  %> <span> ★ </span>
 <!--        <i class="bi bi-star"></i>-->
 
 <!--  <input name="review[rating]" id="e5"  value="5"><label for="e5">★</label>-->
 
-          <span> ★ </span>
 
-      <% end %></div>
+      <% end %></h4> </div>
       <% @review.each do |rev| %>
-
 <!--        <h2><%#= rev.message%></h2>-->
       <% end %>
       </p>
@@ -194,7 +194,9 @@ window.onclick = function(event) {
               window.location.href=" /users/sign_in"  // put your correct path in a string here
           </script>
         <% else %>
+    <div class=" btn btn-dark fw-bold">
       <%= link_to 'Check Rooms',user_rooms_index_path(hotel_id: @hotel) %>
+    </div>
         <% end %>
     </div>
 

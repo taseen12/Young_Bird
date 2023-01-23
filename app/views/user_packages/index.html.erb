@@ -27,8 +27,9 @@
             <div class="price">
               <p>Price : <%= number_to_currency(package.price) %></p>
             </div>
+            <div class=" btn btn-dark fw-bold">
             <%= link_to 'Details',  user_packages_details_path(package_id: package) %>
-
+            </div>
 
           </div>
 

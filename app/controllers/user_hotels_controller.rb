@@ -29,5 +29,6 @@ class UserHotelsController < ApplicationController
   def details
     @hotel = Hotel.find(params[:hotel_id])
     @review = Review.all
+
   end
 end

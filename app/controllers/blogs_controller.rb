@@ -4,17 +4,29 @@ class BlogsController < ApplicationController
   # GET /blogs or /blogs.json
   def index
     @blogs = Blog.all
+    # @blogs = Blog.order(:blog_title)
   end
   def my_blog
 
     #@user = User.includes(:orders).find(params[:user_id])
-    @blogs = current_user.blogs
 
+    # @blog = Blog.find_by_id(@blog.blog_id)
+    @blog = current_user.blogs
 
     @user=User.find(current_user.id)
   end
+  def blog_details
+
+    #@user = User.includes(:orders).find(params[:user_id])
+    @blog =Blog.find_by_id(params[:blog_id])
+    # @hotel = Hotel.find(params[:hotel_id])
+
+    # @user=User.find(current_user.id)
+  end
   # GET /blogs/1 or /blogs/1.json
   def show
+    views = @blog.views + 1
+    @blog.update(views: views)
   end
 
   # GET /blogs/new
@@ -72,6 +84,6 @@ class BlogsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def blog_params
-      params.require(:blog).permit(:title, :description, :text, :published, :published_at, :body, :thumbnail, :banner)
+      params.require(:blog).permit(:title, :description, :text, :published, :views , :published_at, :body, :thumbnail, :banner)
     end
 end

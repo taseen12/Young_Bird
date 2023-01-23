@@ -14,10 +14,12 @@ Rails.application.routes.draw do
   get 'user_packages/filter'
   get 'video_tours/index'
   get 'video_tours/details'
+  get 'blogs/blog_details'
   get 'details', to: "user_hotels#details"
   post 'rating', to: "user_hotels#set_hotel_rating"
   get 'search', to: "user_places#search"
   get 'filter_room', to: "user_rooms#filter_room"
+  get 'min_max', to: "user_rooms#min_max"
   get 'filters_room', to: "user_packages#filters_room"
   get 'bookings/done'
   get 'contacts/done'

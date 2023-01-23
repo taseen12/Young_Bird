@@ -37,6 +37,15 @@
     background: #7fc142;
     color: #fff;
   }
+  .image-resize{
+    height: 300px;
+    width :100%;
+  }
+  .img_fluid{
+    width: 100%;
+    height: 100%;
+    object-fit: cover}
+
 }
 .pack_image{
 
@@ -45,4 +54,6 @@
     background-size: cover;
     background-attachment: inherit;
   }
+
+
 }

@@ -5,32 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d70bfa6-32e7-4670-8759-de527bc777be" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Young_Bird.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Young_Bird.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/user_rooms/index.js.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/bookings.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/bookings.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/home.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/user_hotels.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/user_hotels.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/user_packages.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/user_packages.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/user_places.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/user_places.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/user_rooms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/user_rooms.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/bookings_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/bookings_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/blogs_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/blogs_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/user_hotels_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/user_hotels_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/packs/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/home/_header.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/_header.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/user_rooms_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/user_rooms_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/blogs/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/blogs/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/bookings/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/bookings/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/user_hotels/details.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user_hotels/details.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/user_hotels/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user_hotels/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/user_packages/filter.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user_packages/filter.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/user_packages/details.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user_packages/details.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/user_packages/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user_packages/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/user_places/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user_places/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/user_rooms/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user_rooms/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +60,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/nascenia/Downloads/Project/Young_Bird&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/nascenia/Downloads/vat/vat-mushak&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -302,7 +298,18 @@
       <workItem from="1671905693045" duration="1197000" />
       <workItem from="1672030513595" duration="8063000" />
       <workItem from="1672078515198" duration="9082000" />
-      <workItem from="1672151985764" duration="4702000" />
+      <workItem from="1672151985764" duration="14165000" />
+      <workItem from="1672289661833" duration="14833000" />
+      <workItem from="1672375252861" duration="12758000" />
+      <workItem from="1672582069075" duration="1966000" />
+      <workItem from="1673514974224" duration="1218000" />
+      <workItem from="1673528877321" duration="614000" />
+      <workItem from="1673590535090" duration="3185000" />
+      <workItem from="1673843708260" duration="1391000" />
+      <workItem from="1673931912077" duration="596000" />
+      <workItem from="1674016417112" duration="962000" />
+      <workItem from="1674104667803" duration="598000" />
+      <workItem from="1674383263634" duration="1750000" />
     </task>
     <servers />
   </component>

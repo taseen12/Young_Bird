@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_23_060836) do
+ActiveRecord::Schema.define(version: 2022_12_29_093731) do
 
   create_table "action_text_rich_texts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
@@ -162,7 +162,7 @@ ActiveRecord::Schema.define(version: 2022_12_23_060836) do
     t.integer "room_type"
     t.string "room_description"
     t.string "facilities"
-    t.decimal "price", precision: 10
+    t.integer "price"
     t.string "img_url"
     t.bigint "place_id", null: false
     t.bigint "hotel_id", null: false
@@ -181,6 +181,7 @@ ActiveRecord::Schema.define(version: 2022_12_23_060836) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "admin", default: false
+    t.string "username"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

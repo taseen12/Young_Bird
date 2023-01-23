@@ -120,14 +120,16 @@
   </div>
 </div>
 
-<h1 class=" text-center bg-danger"> Top Booked Hotels </h1>
+<h1 class=" text-center bg-secondary"> Top Booked Hotels </h1>
 <div class="row">
 
   <% @hotels.each do |hotel| %>
 
 
     <div class="col-md-4 border d-flex flex-column  align-items-center">
-      <div class="place_image"> <%= image_tag(hotel.img_url) %></div>
+      <div class="image-resize">
+        <%= image_tag(hotel.img_url,:class => "img_fluid") %>
+      </div>
       <h2><%= hotel.hotel_name %></h2>
       <%#= link_to 'Check Package',user_packages_index_path(place_id: place) %>
     </div>
@@ -137,14 +139,16 @@
 
   <% end %>
 </div>
-<h1 class=" text-center bg-danger"> Top Rated Hotels </h1>
+<h1 class=" text-center bg-secondary"> Top Rated Hotels </h1>
 <div class="row">
 
   <% @hotel.each do |hotel| %>
 
 
     <div class="col-md-4 border d-flex flex-column  align-items-center">
-      <div class="place_image"> <%= image_tag(hotel.img_url) %></div>
+      <div class="image-resize">
+        <%= image_tag(hotel.img_url,:class => "img_fluid") %>
+      </div>
       <h2><%= hotel.hotel_name %></h2>
       <%#= link_to 'Check Package',user_packages_index_path(place_id: place) %>
     </div>
@@ -258,7 +262,7 @@
 <!--</header>-->
 
 
-<h1 class = " text-center bg-danger" > About Us </h1>
+<h1 class = " text-center bg-secondary" > About Us </h1>
 <section class="about top">
   <div class="container d-flex">
     <div class="left">
@@ -276,31 +280,32 @@
     </div>
   </div>
 </section>
-
-<section class="counter top">
-  <div class="container grid d-flex">
-    <div class="box">
-      <h1>2500</h1>
-      <hr>
-      <span>Customer</span>
-    </div>
-    <div class="box">
-      <h1>1250</h1>
-      <hr>
-      <span>Happy Customer</span>
-    </div>
-    <div class="box">
-      <h1>150</h1>
-      <hr>
-      <span>Expert Technicians</span>
-    </div>
-    <div class="box">
-      <h1>3550</h1>
-      <hr>
-      <span>Desktop Reaired</span>
-    </div>
-  </div>
-</section>
+<h1 class=" text-center bg-secondary"> Services </h1>
+<!--<h1 class=" text-center bg-secondary"> Top Rated Hotels </h1>-->
+<!--<section class="counter top">-->
+<!--  <div class="container grid d-flex">-->
+<!--    <div class="box">-->
+<!--      <h1>2500</h1>-->
+<!--      <hr>-->
+<!--      <span>Customer</span>-->
+<!--    </div>-->
+<!--    <div class="box">-->
+<!--      <h1>1250</h1>-->
+<!--      <hr>-->
+<!--      <span>Happy Customer</span>-->
+<!--    </div>-->
+<!--    <div class="box">-->
+<!--      <h1>150</h1>-->
+<!--      <hr>-->
+<!--      <span>Expert Technicians</span>-->
+<!--    </div>-->
+<!--    <div class="box">-->
+<!--      <h1>3550</h1>-->
+<!--      <hr>-->
+<!--      <span>Desktop Reaired</span>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
 
 
 
@@ -977,18 +982,18 @@
         <div class="single-box">
           <h2>Hosting</h2>
           <ul>
-            <li><a href="#">Web Hosting</a></li>
-            <li><a href="#">Cloud Hosting</a></li>
-            <li><a href="#">CMS Hosting</a></li>
-            <li><a href="#">WordPress Hosting</a></li>
-            <li><a href="#">Email Hosting</a></li>
-            <li><a href="#">VPS Hosting</a></li>
+            <li><a href="#">Home </a></li>
+            <li><a href="#">Place</a></li>
+            <li><a href="#">Hotel</a></li>
+            <li><a href="#">Package</a></li>
+            <li><a href="#"> Blog </a></li>
+<!--            <li><a href="#">VPS Hosting</a></li>-->
           </ul>
         </div>
       </div>
       <div class="col-lg-3 col-sm-6">
         <div class="single-box">
-          <h2>Domain</h2>
+          <h2>Services</h2>
           <ul>
             <li><a href="#">Web Domain</a></li>
             <li><a href="#">Cloud Domain</a></li>
@@ -1019,4 +1024,5 @@
     </div>
   </div>
 </footer>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/js/bootstrap.min.js">

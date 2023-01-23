@@ -1,3 +1,4 @@
+<div class="d-flex justify-content-around">
 <section class="book">
 
 <div class="container flex_space">
@@ -11,33 +12,51 @@
     <%= form.date_field :check_in_date, value: Date.today%>
   <%= form.label :check_out_date, "check_out_date:" %>
   <%= form.date_field :check_out_date,value: Date.tomorrow %><br>
-  <%= hidden_field(:hotel, :hotel_id, :value => params[:hotel_id]) %>
+
+  <%#= hidden_field(:hotel, :hotel_id, :value => params[:hotel_id]) %>
+  <%= hidden_field(:hotel, :hotel_id, :value => @hotel_id) %>
     <%= form.submit "Search" %>
   <% end %>
- </div></div></section>
+ </div></div>
+</section>
 
+<section class="book">
 
+  <div class="container flex_space">
+    <div class="text">
+      <h1> <span> Search </span> Available Rooms </h1>
+    </div>
+    <div class="grid">
+      <!--  <form class ="grid">-->
+      <%= form_with(url: min_max_path, method: :get, local: true) do |form| %>
+        <%= form.label :min, "min :" %>
+        <%= form.number_field :min, value: 1000%>
+        <%= form.label :max, "max:" %>
+        <%= form.number_field :max,value: 2000 %><br>
+        <%= hidden_field(:hotel, :hotel_id, :value => @hotel_id) %>
+        <%= hidden_field(:check_in_date=,:value => params[:check_in_date])%>
+        <%= hidden_field(:check_out_date=,:value => params[:check_out_date])%>
+        <%= form.submit "Search" %>
+      <% end %>
+    </div></div>
+</section>
+</div>
 
-<div class="container">
-
+<div class="container" id="roomcontainer">
   <div class="row">
     <%unless @rooms.nil? %>
     <% @rooms.each do |room| %>
-
-
       <div class="col-md-4 border d-flex flex-column  align-items-center">
         <div class="room_image"> <%= image_tag(room.img_url) %></div>
         <h2><%= room.room_no %></h2>
         <p><%= "price" %></p>
         <h2><%= room.price %></h2>
+        <div class=" btn btn-dark fw-bold">
         <%= link_to 'Book Room',new_booking_path(check_in_date: params[:check_in_date],check_out_date:params[:check_out_date],room_id: room , price: room) %>
         <%#= link_to 'Book Room',new_booking_path(check_in_date: params[:check_in_date],check_out_date:params[:check_out_date],@room.id=>params[:room_id],@room.price=>params[:price]) %>
-      </div>
+        </div>
+        </div>
         <%end %>
-
-
-
-
     <% end %>
   </div>
 </div>

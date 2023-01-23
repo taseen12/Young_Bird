@@ -16,7 +16,7 @@
 <!--  </thead>-->
 
 <!--  <tbody>-->
-    <%# @blogs.each do |blog| %>
+<%# @blogs.each do |blog| %>
 <!--      <tr>-->
 <!--        <td><%#= blog.title %></td>-->
 <!--        <td><%#= blog.description %></td>-->
@@ -28,28 +28,28 @@
 <!--        <td><%#= link_to 'Edit', edit_blog_path(blog) %></td>-->
 <!--        <td><%#= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
 <!--      </tr>-->
-    <%# end %>
+<%# end %>
 <!--  </tbody>-->
 <!--</table>-->
 
 <!--<br>-->
 <!--<div class="link">-->
-<%#= link_to 'My Blog', blogs_my_blog_path(blog_id: @blog) %>
+  <%#= link_to 'My Blog', blogs_my_blog_path(blog_id: @blog) %>
 <!--</div>-->
-
-<!--  <h1 class = bg-danger ><%#= @blog.title %></h1>-->
-<!--<div style="width: 100%; height: 300px; overflow-y:hidden">-->
-  <%#= image_tag(@blog.banner,style: 'width: 100%') %>
-<!--</div>-->
+<%# @blogs.each do |blog| %>
+<!--  <h1 class = bg-danger ><%#= blog.title %></h1>-->
+<!--  <div style="width: 100%; height: 300px; overflow-y:hidden">-->
+    <%#= image_tag(blog.banner,style: 'width: 100%') %>
+<!--  </div>-->
 <!--  <p class = " ">-->
-<!--    <%#= @blog.updated_at.strftime("%A, %B, %e, %r")  %> by <%#= @blog.user.email %>| <%#= pluralize(@blog.views, "views" )%>-->
+<!--    <%#= blog.updated_at.strftime("%A, %B, %e, %r")  %> by <%#= blog.user.email %>| <%#= pluralize(blog.views, "views" )%>-->
 <!--  </p>-->
-  <%#= link_to 'See more', blogs_blog_details_path(blog_id: @blog) %>
-  <%#= @blog.body %>
+  <%#= blog.body %>
 
-  <%# end %>
+<%# end %>
 
 <%#= link_to 'New Blog', new_blog_path %>
+
 <!--<p id="notice"><%#= notice %></p>-->
 
 <!--<h1>Blogs</h1>-->
@@ -85,25 +85,25 @@
 <!--</table>-->
 
 <!--<br>-->
+<!--<div class="link">-->
+<%#= link_to 'My Blog', blogs_my_blog_path(blog_id: @blog) %>
+<!--</div>-->
+<div class =" container">
 
-<% @blogs.each do |blog| %>
-  <h1 class = bg-danger ><%= blog.title %></h1>
-  <div style="width: 100%; height: 300px; overflow-y:hidden">
-    <%= image_tag(blog.banner,style: 'width: 100%') %>
-  </div>
-  <p class = " ">
-    <%= blog.updated_at.strftime("%A, %B, %e, %r")  %> by <%= blog.user.email %>| <%= pluralize(blog.views, "views" )%>
-  </p>
-  <%= blog.description %>
-  <div class=" btn btn-light fw-bold">
-  <%= link_to 'See more', blogs_blog_details_path(blog_id: blog) %>
-  </div>
+<div class = "row">
+<h1 class = bg-danger ><%= @blog.title %></h1>
+<div style="width: 100%; height: 300px; overflow-y:hidden">
+  <%= image_tag(@blog.banner,style: 'width: 100%') %>
 
-<% end %>
-<br> </br>
-<div class=" btn btn-dark fw-bold">
-  <%= link_to 'My Blog', blogs_my_blog_path(blog_id: @blog) %>
 </div>
-<div class=" btn btn-primary fw-bold">
+<p class = " ">
+  <%= @blog.updated_at.strftime("%A, %B, %e, %r")  %> by <%= @blog.user.email %>| <%= pluralize(@blog.views, "views" )%>
+</p>
+<%#= link_to 'See more', blogs_blog_details_path(blog_id: @blog) %>
+<%= @blog.body %>
+  <%= image_tag(@blog.thumbnail,style: 'width: 100%') %>
+</div>
+</div>
+<%# end %>
+
 <%= link_to 'New Blog', new_blog_path %>
-</div>
